@@ -11,8 +11,8 @@ export default function App() {
       <Router path="/contact" component={Contact} />
       <Router exact path="/" component={Home} />
       <Router path="/about" component={About} />
-      <h1>Hello CodeSandbox</h1>
-      <h2>Start editing to see some magic happen!</h2>
+      <h1>Hello</h1>
+      <h2>!</h2>
     </div>
   );
 }
