@@ -20,5 +20,6 @@ export default function App() {
         <Route path="/avengers" component={AvengersList} />
       </div>
     </Router>
+
   );
 }
