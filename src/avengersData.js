@@ -148,3 +148,5 @@ const avengers = [
     movies: ["Avengers: Infinity War", "Doctor Strange"]
   }
 ];
+
+export default avengers;
