@@ -25,6 +25,7 @@ body {
   display: flex;
   justify-content: flex-start;
   align-items: center;
+  text-decoration: none;
 }
 
 .navbar > li > a {
@@ -36,6 +37,7 @@ body {
 
 .navbar > li > a.activeNavButton {
   background-color: #4285f4;
+  text-decoration: none;
   color: white;
 }
 
