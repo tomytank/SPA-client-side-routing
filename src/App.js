@@ -1,6 +1,8 @@
 import React from "react";
 //import ReactDOM from "react-dom";
 import { BrowserRouter as Router, Link, Route, Switch } from "react-router-dom";
+import styled from "styled-components";
+import Button from "./components/Button";
 import "./styles.css";
 
 import Contact from "./components/Contact";
@@ -16,10 +18,14 @@ export default function App() {
       <div className="App">
         <ul className="navbar">
           <li>
-            <Link to="/">Home</Link>
+            <Button type="primary">
+              <Link to="/">Home</Link>
+            </Button>
           </li>
           <li>
-            <Link to="/avengers">Avengers</Link>
+            <Button type="success">
+              <Link to="/avengers">Avengers</Link>
+            </Button>
           </li>
         </ul>
         {/* <Router path="/contact" component={Contact} /> */}
