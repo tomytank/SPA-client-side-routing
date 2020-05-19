@@ -13,12 +13,14 @@ export default function AvengersList() {
       <div className="characters-list-wrapper">
         {avengers.map(avenger => {
           return (
-            <div className="character-card">
-              <h1>{avenger.name}</h1>
-              <h3>({avenger.nickname})</h3>
-              <p>{avenger.description}</p>
-              <img src={avenger.thumbnail} atl={avenger.name} />
-            </div>
+            <Link className="router-link" to={`/avengers/${avenger.id}`}>
+              <div className="character-card">
+                <h2>{avenger.name}</h2>
+                <h3>({avenger.nickname})</h3>
+                {/* <p className="character-info-wrapper">{avenger.description}</p> */}
+                <img src={avenger.thumbnail} atl={avenger.name} />
+              </div>
+            </Link>
           );
         })}
       </div>
@@ -28,6 +30,16 @@ export default function AvengersList() {
     </div>
   );
 }
+
+// <Link to={`/avengers/${avenger.id}`}>
+// <div className="character-card">
+//   <h2>{avenger.name}</h2>
+//   <h3>({avenger.nickname})</h3>
+//   {/* <p className="character-info-wrapper">{avenger.description}</p> */}
+//   <img src={avenger.thumbnail} atl={avenger.name} />
+// </div>
+// </Link>
+
 // {
 //   id: 1,
 //   name: "Iron Man",
