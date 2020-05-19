@@ -14,8 +14,16 @@ export default function App() {
   return (
     <Router>
       <div className="App">
+        <ul className="navbar">
+          <li>
+            <Link to="/">Home</Link>
+          </li>
+          <li>
+            <Link to="/avengers">Avengers</Link>
+          </li>
+        </ul>
         {/* <Router path="/contact" component={Contact} /> */}
-        Oh my God!
+        Goodness Gracious
         <Route exact path="/" component={Home} />
         <Route path="/avengers" component={AvengersList} />
       </div>
