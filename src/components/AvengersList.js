@@ -12,13 +12,14 @@ export default function AvengersList() {
       <p>Avengers here, avengers there....</p>
       <div className="characters-list-wrapper">
         {avengers.map(avenger => {
+          console.log(avenger.id);
           return (
             <Link className="router-link" to={`/avengers/${avenger.id}`}>
-              <div className="character-card">
+              <div className="character-card" key={avenger.id}>
                 <h2>{avenger.name}</h2>
-                <h3>({avenger.nickname})</h3>
+                {/* <h3>({avenger.nickname})</h3> */}
                 {/* <p className="character-info-wrapper">{avenger.description}</p> */}
-                <img src={avenger.thumbnail} atl={avenger.name} />
+                <img src={avenger.thumbnail} alt={avenger.name} />
               </div>
             </Link>
           );
