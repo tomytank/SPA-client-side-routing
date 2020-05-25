@@ -1,6 +1,7 @@
 // Data gathered from https://www.marvel.com/characters
 
-const avengers = [
+//const avengers = [
+export default [
   {
     id: 1,
     name: "Iron Man",
@@ -149,4 +150,4 @@ const avengers = [
   }
 ];
 
-export default avengers;
+//export default avengers;
