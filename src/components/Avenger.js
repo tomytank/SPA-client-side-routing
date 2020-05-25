@@ -3,16 +3,21 @@ import { useParams } from "react-router-dom";
 
 function Avenger({ hero }) {
   const params = useParams();
-  //console.log("Params in Avenger.js:", params);
-  //console.log("hero param is: ", hero);
+  console.log("Params in Avenger.js:", params);
+  console.log("hero param is: ", hero);
   //console.log("params.hero = ", Number(params.hero));
-  //console.log("params.hero is: ", Number(params.hero);
-  const heros = hero.find(item => item.id === Number(params.hero));
+  console.log(isNaN(Number(params.hero)));
+  let heros = undefined;
+  if (isNaN(Number(params.hero))) {
+    heros = hero.find(item => item.name === params.hero);
+  } else {
+    heros = hero.find(item => item.id === Number(params.hero));
+  }
   //const heros = hero.find(item => {
   //item.id === Number(params.hero);
   //console.log("item,", item);
   //});
-  //console.log("heros in Avenger.js is: ", heros);
+  console.log("heros in Avenger.js is: ", heros);
   return (
     <div className="character-card">
       <h2>{heros.nickname}</h2>
