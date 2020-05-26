@@ -1,8 +1,10 @@
 import React, { useState } from "react";
 //import ReactDOM from "react-dom";
 import { BrowserRouter as Router, Link, Route, Switch } from "react-router-dom";
+//import { useRouteMatch } from "react-router";
 import styled from "styled-components";
 import Button from "./components/Button";
+
 import "./styles.css";
 
 // import Contact from "./components/Contact";
@@ -16,6 +18,7 @@ import heros from "./avengersData";
 
 export default function App() {
   const [hero] = useState(heros);
+
   return (
     <Router>
       <nav className="navbar">
@@ -32,7 +35,7 @@ export default function App() {
       </nav>
       <div className="App">
         {/* <Router path="/contact" component={Contact} /> */}
-        Goodness Gracious
+        Goodness Gracious Avenger
         <Switch>
           <Route path="/avengers/:hero">
             <Avenger key={hero.id} hero={hero} />

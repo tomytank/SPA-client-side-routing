@@ -7,11 +7,11 @@ const Button = styled.button`
   border: none;
   border-radius: 3px;
   color: white;
+  text-decoration: none;
 
   ${props => (props.type === "primary" ? `background: #2196f3` : null)}
   ${props => (props.type === "success" ? `background: #4caf50` : null)}
   ${props => (props.type === "danger" ? `background: #f44336` : null)}
   ${props => (props.type === "warning" ? `background: #fdd835` : null)}
 `;
-
 export default Button;
