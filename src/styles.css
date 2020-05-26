@@ -17,6 +17,7 @@ body {
 }
 
 .navbar {
+  text-decoration: none;
   margin: 0;
   padding: 0;
   height: 64px;
@@ -25,6 +26,9 @@ body {
   display: flex;
   justify-content: flex-start;
   align-items: center;
+}
+
+.navbar > li > button > a {
   text-decoration: none;
 }
 
@@ -109,7 +113,11 @@ body {
   max-width: 900px;
   max-height: 275px;
 }
-
+.back-button {
+  background-color: lightcoral;
+  border-radius: 4px;
+  padding: 6px;
+}
 .nav-buttons {
   margin: 16px 36px;
   /* display: flex;

@@ -1,5 +1,11 @@
 import React from "react";
-import { useParams, useRouteMatch, Route, NavLink } from "react-router-dom";
+import {
+  useParams,
+  useRouteMatch,
+  Route,
+  NavLink,
+  useHistory
+} from "react-router-dom";
 
 import Movies from "./Movies";
 
@@ -7,6 +13,7 @@ import "../styles.css";
 
 function Avenger({ hero }) {
   const params = useParams();
+  const history = useHistory();
   const { path, url } = useRouteMatch();
   // console.log("Params in Avenger.js:", params);
   // console.log("hero param is: ", hero);
@@ -37,6 +44,15 @@ function Avenger({ hero }) {
         <Route path={`${path}/movies`}>
           <Movies movielist={heros} />
         </Route>
+        <div>
+          <button
+            className="nav-buttons back-button"
+            type="button"
+            onClick={() => history.goBack()}
+          >
+            Go Back
+          </button>
+        </div>
       </div>
     </div>
   );
