@@ -1,21 +1,24 @@
 import React from "react";
-import { Link, useParams } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 import avengers from "../avengersData";
 
 //console.log(avenger);
-
 export default function AvengersList() {
   return (
-    <div>
+    <div className="items-list-wrapper">
       <h1>The Avengers List!</h1>
       <p>Avengers here, avengers there....</p>
       <div className="characters-list-wrapper">
         {avengers.map(avenger => {
           console.log(avenger.id);
           return (
-            <Link className="router-link" to={`/avengers/${avenger.id}`}>
-              <div className="character-card" key={avenger.id}>
+            <Link
+              className="router-link"
+              key={avenger.id}
+              to={`/avengers/${avenger.id}`}
+            >
+              <div className="character-card">
                 <h2>{avenger.name}</h2>
                 {/* <h3>({avenger.nickname})</h3> */}
                 {/* <p className="character-info-wrapper">{avenger.description}</p> */}
