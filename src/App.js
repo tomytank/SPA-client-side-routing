@@ -43,8 +43,8 @@ export default function App() {
           <Route path="/avengers/">
             <AvengersList hero={hero} />
           </Route>
-          <Route path="/avengers" component={AvengersList} />
-          <Route exact path="/" component={Home} />
+          {/* <Route path="/avengers" component={AvengersList} />
+          <Route exact path="/" component={Home} /> */}
         </Switch>
       </div>
     </Router>
